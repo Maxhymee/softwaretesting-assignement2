@@ -201,6 +201,12 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+  "reporters": [
+    "default",
+    ["jest-junit", { "outputDirectory": "./coverage", "outputName": "junit.xml" }]
+  ]
+},
   "author": "Conrad Fabe, Maxime Hervy",
   "license": "MIT"
 }
