@@ -25,5 +25,10 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Run Tests
-      run: npm test
+    - name: Run Tests and Generate Coverage
+      run: npm test -- --coverage
+
+    - name: Upload Coverage to Coveralls
+      run: npx nyc report --reporter=text-lcov > coverage.lcov && npx coveralls < coverage.lcov
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
