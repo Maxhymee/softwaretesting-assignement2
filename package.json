@@ -202,8 +202,8 @@
   },
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "jest": {
     "transform": {}
